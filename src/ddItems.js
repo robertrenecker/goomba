@@ -18,6 +18,6 @@ export default ListItem;
 const Hello = styled.div`
     color: white;
     font-weight: bold;
-    padding: 5px;
+    padding: 10px;
 `;
 

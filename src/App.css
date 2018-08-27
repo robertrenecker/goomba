@@ -12,13 +12,13 @@
   
 }
 .App-header>img{
-  width: 90%;
+  width: 90em;
   margin: 0 auto;
   display: relative;
 
 }
 .App-dd-container{
-  width: 8%;
+  width: 10em;
   padding-left: 20px;
   height: 200px;
 }
