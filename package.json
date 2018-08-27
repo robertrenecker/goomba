@@ -2,10 +2,12 @@
   "name": "goomba",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://robertrenecker.github.io/goomba/",
   "dependencies": {
     "ajv": "^6.5.3",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
+    "gh-pages": "^1.2.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-overdrive": "0.0.10",
@@ -17,6 +19,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
+
   }
 }

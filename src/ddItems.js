@@ -4,8 +4,9 @@ import {
   Link,
 } from 'react-router-dom';
 
+
 const ListItem = ({name}) => (
-  <Link to={`/${name.content}`}>
+  <Link to={`/${name.content}`} style={{ textDecoration: 'none' }}>
     <Hello>
       {name.content}
     </Hello>
@@ -15,11 +16,8 @@ const ListItem = ({name}) => (
 export default ListItem;
 
 const Hello = styled.div`
-    height: 20px;
     color: white;
     font-weight: bold;
-    padding-top: 10px;
-    margin-top: 20px;
-    
+    padding: 5px;
 `;
 

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import ListItem from './ddItems';
+import styled from 'styled-components';
 
 export default class DDMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
       items: [],
+      hover: false,
     };
   }
 
@@ -19,9 +21,18 @@ export default class DDMenu extends Component {
     return (
 
       <div>
-        {this.state.items.map(itemInList => (<ListItem key={itemInList.id} name={itemInList} />))}
+        {this.state.items.map(itemInList => (
+          <LinkBox>
+            <ListItem key={itemInList.id} name={itemInList} />
+          </LinkBox>
+          ),
+        )}
       </div>
     );
   }
 }
 
+const LinkBox = styled.div`
+    height: 20px;
+    margin-top: 25px;
+`;
