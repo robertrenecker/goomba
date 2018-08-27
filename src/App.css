@@ -1,0 +1,36 @@
+.App {
+  text-align: left;
+}
+
+.App-header {
+  animation: App-header-background 10s linear 5s infinite;
+  background-color: #222;
+  border-radius: 0px 55px 55px 0px;
+  height: 200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  
+}
+.App-header>img{
+  width: 90%;
+  margin: 0 auto;
+  display: relative;
+
+}
+.App-dd-container{
+  width: 8%;
+  padding-left: 20px;
+  height: 200px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+
+@keyframes App-header-background {
+  0%{background-color:  #99ebff}
+  50%{background-color:black;}
+  100%{background-color:  #99ebff}
+}
