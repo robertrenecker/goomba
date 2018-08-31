@@ -34,9 +34,14 @@ export default class DDMenu extends Component {
 
 const LinkBox = styled.div`
     height: 25px;
-    margin-top: 25px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
     &:hover {
-        box-shadow: 10px 10px 5px grey;
+        box-shadow: 3px 3px 3px 3px grey;
         border-radius: 5px 5px 5px 5px;
     }
 `;
