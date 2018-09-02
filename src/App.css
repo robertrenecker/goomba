@@ -1,27 +1,29 @@
 .App {
-  text-align: left;
+  width: 100%;
+
 }
 
 .App-header {
-  animation: App-header-background 10s linear 5s infinite;
   background-color: #222;
-  height: 200px;
-  padding: 20px;
+  height: 200px; 
   display: flex;
   flex-direction: row;
+}
+
+.App-header>.menu-background{
+  animation: App-header-background 20s linear 5s infinite;
+  order: 0;
+  width:15vw;
   
 }
 .App-header>img{
-  width: 90em;
-  margin: 0 auto;
-  display: relative;
+  flex-grow: .9;
+  order: 1;
+  width: 85vw;
+  object-fit: cover;
 
 }
-.App-dd-container{
-  width: 10em;
-  padding-left: 20px;
-  height: 200px;
-}
+
 
 .App-title {
   font-size: 1.5em;

@@ -18,7 +18,7 @@ const App = () => (
   <Router>
     <div className="App">
       <header className="App-header">
-        <div className="App-dd-container">
+        <div className="menu-background">
           <DDMenu />
         </div>
         <img src={logo} alt="logo" />
