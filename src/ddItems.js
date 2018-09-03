@@ -27,7 +27,12 @@ ListItem.propTypes = {
 const Hello = styled.div`
     color: white;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
-    
+    width: 25vw;
+    border-right: dotted black;
+
+    &:hover {
+      opacity: 0.8;
+      margin-top: 1px;
+      border-right: dotted white;
+  }
 `;

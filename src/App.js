@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import {
   BrowserRouter as Router,
   Route,
@@ -8,8 +7,10 @@ import {
 
 import DDMenu from './ddMenu';
 import HomePage from './homepage';
-import PageDetails from './pagedetails';
-import logo from './images/banner.svg';
+import Home from './pages/home';
+import Projects from './pages/projects';
+import Resume from './pages/resume';
+import Contact from './pages/contact';
 
 import './App.css';
 
@@ -21,31 +22,18 @@ const App = () => (
         <div className="menu-background">
           <DDMenu />
         </div>
-        <img src={logo} alt="logo" />
       </header>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/Home" component={HomePage} />
-        <Route exact strict path="/:page" component={PageDetails} />
-        <MainBody>
-          <p>Under Construction</p>
-        </MainBody>
+        <Route exact strict path="/Home" component={Home} />
+        <Route exact strict path="/Projects" component={Projects} />
+        <Route exact strict path="/Resume" component={Resume} />
+        <Route exact strict path="/Contact" component={Contact} />
+        <Route render={() => <h1>Page not found</h1>} />
+
       </Switch>
     </div>
   </Router>
 );
 
 export default App;
-
-const MainBody = styled.div`
-
-  p{
-    color: black;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-`;
-

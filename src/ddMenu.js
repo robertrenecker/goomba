@@ -13,35 +13,28 @@ export default class DDMenu extends Component {
 
   componentWillMount() {
     const itemsToAdd = [];
-    itemsToAdd.push({ id: 1, content: 'Home' }, { id: 2, content: 'Projects' }, { id: 3, content: 'About' }, { id: 4, content: 'Contact' });
+    itemsToAdd.push({ id: 1, content: 'Home' }, { id: 2, content: 'Projects' }, { id: 3, content: 'Resume' }, { id: 4, content: 'Contact' });
     this.setState({ items: itemsToAdd });
   }
 
   render() {
     return (
 
-      <div>
+      <LinkBox>
         {this.state.items.map(itemInList => (
-          <LinkBox key={itemInList.id} >
-            <ListItem key={itemInList.id} name={itemInList} />
-          </LinkBox>
+          <ListItem key={itemInList.id} name={itemInList} />
           ),
         )}
-      </div>
+      </LinkBox>
     );
   }
 }
 
 const LinkBox = styled.div`
-    height: 25px;
-    margin-top: 20px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     text-align: center;
-    
-    &:hover {
-        box-shadow: 3px 3px 3px 3px grey;
-        border-radius: 5px 5px 5px 5px;
-    }
+    height: 100%;
 `;
